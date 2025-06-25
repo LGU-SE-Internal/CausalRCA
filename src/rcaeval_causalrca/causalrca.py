@@ -702,7 +702,7 @@ def causalrca(data, inject_time=None, dataset=None, with_bg=False, **kwargs):
 
 class CausalRCA(Algorithm):
     def needs_cpu_count(self) -> int | None:
-        return 4
+        return 16
 
     def __call__(self, args: AlgorithmArgs) -> list[AlgorithmAnswer]:
         adapter = SimpleMetricsAdapter(causalrca)

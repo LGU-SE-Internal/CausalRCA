@@ -34,7 +34,7 @@ class SimpleMetricsAdapter:
 
         inject_time = load_inject_time(args.dataset, args.input_folder)
         df = preprocess(load_simple_metrics(args.dataset, args.input_folder))
-        df.to_csv(args.output_folder / "simple_metrics.csv", index=False)
+        #df.to_csv(args.output_folder / "simple_metrics.csv", index=False)
         output = (self.func)(data=df, inject_time=inject_time, dataset="train-ticket")
         ranks: list[str] = output["ranks"]
 
