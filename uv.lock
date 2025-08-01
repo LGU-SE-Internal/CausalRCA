@@ -339,6 +339,15 @@ wheels = [
 ]
 
 [[package]]
+name = "graphviz"
+version = "0.21"
+source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple" }
+sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/f8/b3/3ac91e9be6b761a4b30d66ff165e54439dcd48b83f4e20d644867215f6ca/graphviz-0.21.tar.gz", hash = "sha256:20743e7183be82aaaa8ad6c93f8893c923bd6658a04c32ee115edb3c8a835f78", size = 200434, upload-time = "2025-06-15T09:35:05.824Z" }
+wheels = [
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/91/4c/e0ce1ef95d4000ebc1c11801f9b944fa5910ecc15b5e351865763d8657f8/graphviz-0.21-py3-none-any.whl", hash = "sha256:54f33de9f4f911d7e84e4191749cac8cc5653f815b06738c54db9a15ab8b1e42", size = 47300, upload-time = "2025-06-15T09:35:04.433Z" },
+]
+
+[[package]]
 name = "hf-xet"
 version = "1.1.3"
 source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple" }
@@ -1161,7 +1170,7 @@ wheels = [
 
 [[package]]
 name = "rcabench"
-version = "1.0.51"
+version = "1.1.19"
 source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple" }
 dependencies = [
     { name = "aiohttp" },
@@ -1179,17 +1188,18 @@ dependencies = [
     { name = "urllib3" },
     { name = "wheel" },
 ]
-sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/94/df/87abb51466b8754bb47ab74a9637242c763befe1365a983224aa507722e3/rcabench-1.0.51.tar.gz", hash = "sha256:9bd173efc0d871c0206bec98bee5ba59eaccd46b9d4acdc90353ddc1d660c4e6", size = 161698, upload-time = "2025-07-15T17:11:57.814Z" }
+sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/8d/e6/431b03eaad1882aad11461ab7785bfe44b4d2450a5b4651e640e6b750dbb/rcabench-1.1.19.tar.gz", hash = "sha256:352a658d352515706be4c8af31982f7e017e6b3ca46338c57a3b5aef5c727035", size = 247307, upload-time = "2025-07-31T10:13:58.63Z" }
 wheels = [
-    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/b7/27/77a4b74ce64344361f26b61e5d69a8608b50c94e2ac0d892226c70b48e9b/rcabench-1.0.51-py3-none-any.whl", hash = "sha256:d08d619026d26fba4f38b7a93436e94c187523ffeac1b04e8ad438ab6ccc84f4", size = 321536, upload-time = "2025-07-15T17:11:54.867Z" },
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/85/ad/2c0f49087a0ac9176c23d943b3b6347e35f36ae22505e78113ceb3539993/rcabench-1.1.19-py3-none-any.whl", hash = "sha256:58a33eede60c3457dac8f5a09ae37fe52c1579f04de2f2bc6339ee7cfc3a702d", size = 648998, upload-time = "2025-07-31T10:13:56.911Z" },
 ]
 
 [[package]]
 name = "rcabench-platform"
-version = "0.3.7"
+version = "0.3.13"
 source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple" }
 dependencies = [
     { name = "clickhouse-connect" },
+    { name = "graphviz" },
     { name = "huggingface-hub" },
     { name = "kubernetes" },
     { name = "loguru" },
@@ -1208,9 +1218,9 @@ dependencies = [
     { name = "tqdm" },
     { name = "typer" },
 ]
-sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/12/8a/ea00bc665abce06d47e2757aa74796072143022e9cb86f330cd1a63b1686/rcabench_platform-0.3.7.tar.gz", hash = "sha256:37824dff7f2436266ed397f82deffece0cda0054aff50421a77266d712f215ae", size = 50161, upload-time = "2025-07-19T03:16:51.623Z" }
+sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/94/10/b6afeb10e3f3c7e288e587dd8efe530c144189f6f6b0fde350e35d8460f4/rcabench_platform-0.3.13.tar.gz", hash = "sha256:138a9f5b9cfc8a6e892595f00f0120c27edf890565d5a8d3f4da51bfc61cab17", size = 66204, upload-time = "2025-07-31T13:07:32.114Z" }
 wheels = [
-    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/de/74/70b81b839d675b86def29b438e79d9ec6006371018c4f8fa2dc21cfd82a3/rcabench_platform-0.3.7-py3-none-any.whl", hash = "sha256:839798dd8187509f1110efe4dce917cdcec53f23212f31c51c571cf9c0f4c793", size = 74844, upload-time = "2025-07-19T03:16:50.498Z" },
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/dc/8e/8e43150b49741e78595d3737405def4a330b110a7f740729e81093d0496b/rcabench_platform-0.3.13-py3-none-any.whl", hash = "sha256:a309d97086cde5dadfd14cfcd25abad6cf3bb4e755d39cfc287d9f8de51ad902", size = 94579, upload-time = "2025-07-31T13:07:31.046Z" },
 ]
 
 [[package]]
@@ -1225,7 +1235,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "rcabench-platform", specifier = ">=0.3.7" },
+    { name = "rcabench-platform", specifier = ">=0.3.12" },
     { name = "scikit-network", specifier = ">=0.33.3" },
     { name = "torch", specifier = ">=2.7.1" },
 ]
