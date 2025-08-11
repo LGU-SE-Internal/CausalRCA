@@ -1170,7 +1170,7 @@ wheels = [
 
 [[package]]
 name = "rcabench"
-version = "1.1.28"
+version = "1.1.30"
 source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple" }
 dependencies = [
     { name = "aiohttp" },
@@ -1188,9 +1188,9 @@ dependencies = [
     { name = "urllib3" },
     { name = "wheel" },
 ]
-sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/c2/b9/fa18d09f512530659861190442af9ee02daee03638fc3666698847ecc557/rcabench-1.1.28.tar.gz", hash = "sha256:c92657ba13362b530ee8588ee07fce99c74f840101a80163b7fcc019838f0929", size = 257793, upload-time = "2025-08-07T13:56:12.767Z" }
+sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/ff/14/1d97f46b8d7757588289b30fd4815a57f8f635a949864928de612d12f8c8/rcabench-1.1.30.tar.gz", hash = "sha256:9733a5b66b56718d306904fbe8eb87d2449797d4d41b1835bcf74201746987c2", size = 258996, upload-time = "2025-08-11T10:27:18.802Z" }
 wheels = [
-    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/9b/e8/9e82dec5b7b3bb3331081e49b34e786b5a36ef3890a02de8693cc62aed08/rcabench-1.1.28-py3-none-any.whl", hash = "sha256:61c23309a28ebcd776f0cae2a13feccfbb72a658d0598c495969b070d40ce31e", size = 692599, upload-time = "2025-08-07T13:56:11.511Z" },
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/a3/5c/e6585bb024d02301b463597e2eed60af80d13bdf22935efe30220684d5bd/rcabench-1.1.30-py3-none-any.whl", hash = "sha256:b66b44745ab6b2a0f4f1c9169e4726b047b04242cd9ea688334fe49e89393539", size = 695945, upload-time = "2025-08-11T10:27:17.377Z" },
 ]
 
 [[package]]
@@ -1229,6 +1229,7 @@ name = "rcaeval-causalrca"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "rcabench" },
     { name = "rcabench-platform" },
     { name = "scikit-network" },
     { name = "torch" },
@@ -1236,6 +1237,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "rcabench", specifier = ">=1.1.30" },
     { name = "rcabench-platform", specifier = ">=0.3.24" },
     { name = "scikit-network", specifier = ">=0.33.3" },
     { name = "torch", specifier = ">=2.7.1" },
