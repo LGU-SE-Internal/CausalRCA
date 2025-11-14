@@ -8,9 +8,10 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
-    "rcabench-platform>=0.3.12",
+    "rcabench-platform==0.3.34",
     "scikit-network>=0.33.3",
     "torch>=2.7.1",
+    "rcabench==1.1.39",
 ]
 
 [build-system]

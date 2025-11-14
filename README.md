@@ -1,15 +1,44 @@
-# causalrca
+# casualrca Algorithm Reproduction
+
+## Quick Start
+
+### 1. Install Dependencies
 
 ```bash
-sudo juicefs mount redis://10.10.10.38:6379/1 /mnt/jfs -d --cache-size=1024
+uv sync
+```
 
-mkdir data
-cd data
-ln -s /mnt/jfs/rcabench_dataset ./
-ln -s /mnt/jfs/rcabench-platform-v2 ./
+### 2. Build Docker Image
 
-./main.py eval single causalrca rcabench ts3-ts-route-plan-service-request-delay-59s2q4
+```bash
+docker build -t casualrca .
+```
 
-mkdir temp
-ALGORITHM=RUN INPUT_PATH=data/rcabench_dataset/ts3-ts-route-plan-service-request-delay-59s2q4 OUTPUT_PATH=temp uv run python run_exp.py
+### 3. Run the Algorithm
+
+```bash
+docker run -it \
+  -v $(pwd)/data/rcabench_dataset/ts0-mysql-bandwidth-5p8bkc:/data/rcabench_dataset/ts0-mysql-bandwidth-5p8bkc \
+  -e INPUT_PATH=/data/rcabench_dataset/ts0-mysql-bandwidth-5p8bkc \
+  -e OUTPUT_PATH=/data/rcabench_dataset/ts0-mysql-bandwidth-5p8bkc \
+  -e RCABENCH_SUBMISSION='false' \
+  casualrca
+```
+
+## Parameters
+
+- `INPUT_PATH`: Input data path
+- `OUTPUT_PATH`: Output results path 
+- `RCABENCH_SUBMISSION`: Whether to submit results to RCABench platform (default: false)
+
+## Data Preparation
+
+Ensure the data directory structure follows:
+
+```bash
+data/
+└── rcabench_dataset/
+    └── ts0-mysql-bandwidth-5p8bkc/
+        ├── injection.json
+        └── ... (other data files)
 ```
